@@ -128,3 +128,43 @@ kubectl port-forward pod/edtech-nlp-sql-api 8000:8000
 - Secrets managed via Kubernetes Secrets or `.env`
 
 ## 📝 Project Structure
+
+edtech-nlp-sql-project/
+├── main.py                 # FastAPI application
+├── database.py             # Database operations
+├── models.py               # Pydantic models
+├── nlp_to_sql.py           # NLP to SQL conversion
+├── utils.py                # Utility functions
+├── tests/
+│   ├── init.py
+│   ├── test_api.py
+│   ├── test_database.py
+│   └── test_nlp_to_sql.py
+├── Dockerfile
+├── docker-compose.yml
+├── kubernetes.yaml
+├── requirements.txt
+├── pytest.ini
+├── .env.example
+├── .gitignore
+└── README.md
+
+## 🆘 Troubleshooting
+
+| Issue | Fix |
+|-------|-----|
+| API key not found | Add `OPENAI_API_KEY` to `.env` |
+| Port 8000 in use | Use `--port 8001` |
+| DB not created | Delete `edtech.db` and restart |
+| Tests failing | Run `pip install -r requirements.txt` first |
+
+## 🎓 Learning Resources
+
+- [FastAPI Docs](https://fastapi.tiangolo.com/)
+- [LangChain Docs](https://python.langchain.com/)
+- [OpenAI API Docs](https://platform.openai.com/docs/)
+- [Kubernetes Docs](https://kubernetes.io/docs/)
+
+---
+
+
